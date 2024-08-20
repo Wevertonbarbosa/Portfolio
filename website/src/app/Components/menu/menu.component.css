@@ -1,0 +1,70 @@
+.divMainSide {
+  height: 100vh;
+  width: 9vw;
+  background-color: black;
+}
+
+a {
+  color: #bab8b8;
+}
+
+button {
+  background-color: #ffba03;
+}
+
+.plano {
+  background-color: #1cbaa6;
+}
+
+.planoEscolhido {
+  font-size: x-small;
+}
+
+.linksActive {
+  background: #1cbaa6;
+}
+
+.sizeUserText {
+  font-size: smaller;
+}
+
+#colorLogout {
+  color: black;
+}
+
+@media (max-width: 991px) {
+  .divMainSide {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    border-bottom: solid 1px white;
+  }
+
+  .imgUser {
+    width: 45% !important;
+  }
+
+  a {
+    font-size: 40px !important;
+  }
+
+  ul {
+    margin: 0px !important;
+  }
+
+  .sizeUserText {
+    display: none;
+  }
+}
+
+@media (max-width:575px) {
+  .divUserImg{
+    display: none;
+  }
+  .divLinks{
+    width: 100%;
+  }
+  .listLinks{
+    justify-content: space-around;
+  }
+}

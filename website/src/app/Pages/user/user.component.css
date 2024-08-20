@@ -1,0 +1,21 @@
+.mainDiv {
+  background-color: black;
+  height: 100%;
+}
+
+span {
+  background: #1cbaa6;
+}
+
+a:hover {
+  opacity: .7;
+}
+
+@media (max-width:575px){
+ .divMsgHello{
+  justify-content: center;
+ }
+ .divContato{
+  justify-content: center !important;
+ }
+}
