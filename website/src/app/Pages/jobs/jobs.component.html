@@ -1,6 +1,83 @@
-<div class="container-fluid p-0 d-flex mainDiv">
+<div class="container-fluid p-0 mainDiv d-flex flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-xxl-row">
+
+  <app-menu class="border-end border-2"></app-menu>
+
+
+  <div class="container-fluid p-2">
+
+    <div class="d-flex justify-content-center align-items-center p-0">
+      <iframe *ngIf="currentPage === 1" src="https://www.behance.net/embed/project/175566889?ilo0=1" height="416"
+        width="504" class="teste" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+        refererPolicy="strict-origin-when-cross-origin"></iframe>
+
+      <iframe *ngIf="currentPage === 2" src="https://www.behance.net/embed/project/175565793?ilo0=1" height="416"
+        width="504" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+        refererPolicy="strict-origin-when-cross-origin"></iframe>
+
+      <iframe *ngIf="currentPage === 3" src="https://www.behance.net/embed/project/175561529?ilo0=1" height="416"
+        width="504" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+        refererPolicy="strict-origin-when-cross-origin"></iframe>
+
+      <iframe *ngIf="currentPage === 4" src="//www.behance.net/embed/project/175560435?ilo0=1" height="416" width="504"
+        allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+        refererPolicy="strict-origin-when-cross-origin"></iframe>
+
+      <iframe *ngIf="currentPage === 5" src="https://www.behance.net/embed/project/175558939?ilo0=1" height="416"
+        width="504" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+        refererPolicy="strict-origin-when-cross-origin"></iframe>
+
+      <iframe *ngIf="currentPage === 6" src="https://www.behance.net/embed/project/175555585?ilo0=1" height="416"
+        width="504" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+        refererPolicy="strict-origin-when-cross-origin"></iframe>
+
+      <iframe *ngIf="currentPage === 7" src="https://www.behance.net/embed/project/175554353?ilo0=1" height="416"
+        width="504" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+        refererPolicy="strict-origin-when-cross-origin"></iframe>
+
+      <iframe *ngIf="currentPage === 8" src="https://www.behance.net/embed/project/155864237?ilo0=1" height="416"
+        width="504" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+        refererPolicy="strict-origin-when-cross-origin"></iframe>
+
+      <iframe *ngIf="currentPage === 9" src="https://www.behance.net/embed/project/154866727?ilo0=1" height="416"
+        width="504" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+        refererPolicy="strict-origin-when-cross-origin"></iframe>
+
+      <iframe *ngIf="currentPage === 10" src="https://www.behance.net/embed/project/154816553?ilo0=1" height="416"
+        width="504" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+        refererPolicy="strict-origin-when-cross-origin"></iframe>
+
+      <iframe *ngIf="currentPage === 11" src="https://www.behance.net/embed/project/153991411?ilo0=1" height="416"
+        width="504" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+        refererPolicy="strict-origin-when-cross-origin"></iframe>
+
+    </div>
+
+    <div class="container-fluid d-flex p-0 justify-content-center align-items-center flex-column">
+      <p class="m-3 text-white textMedium h5">Meus trabalhos</p>
+      <nav>
+        <ul class="pagination pagination-lg justify-content-center">
+          <li class="page-item" [class.disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">
+            <span class="page-link textMedium">Anterior</span>
+          </li>
+    
+          <ng-container *ngFor="let page of [currentPage-1, currentPage, currentPage+1]">
+            <li *ngIf="page > 0 && page <= totalPages" 
+                class="page-item" 
+                [class.active]="currentPage === page" 
+                (click)="changePage(page)">
+              <span class="page-link textMedium">{{ page }}</span>
+            </li>
+          </ng-container>
+    
+          <li class="page-item" [class.disabled]="currentPage === totalPages" (click)="changePage(currentPage + 1)">
+            <span class="page-link textMedium">Próximo</span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
+  </div>
 
 
 
-  
 </div>

@@ -1,5 +1,4 @@
 .mainDiv {
-  background-color: black;
   height: 100%;
 }
 
@@ -12,7 +11,11 @@ a:hover {
 }
 
 @media (max-width:575px){
- .divMsgHello{
+ .mainDiv{
+  flex-direction: column;
+ }
+ 
+  .divMsgHello{
   justify-content: center;
  }
  .divContato{
