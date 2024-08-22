@@ -1,0 +1,126 @@
+<div class="container-fluid p-0 d-flex mainDiv flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-xxl-row">
+
+  <app-menu class="border-end border-2"></app-menu>
+
+  <div
+    class="container-fluid d-flex align-items-center gap-3 flex-xl-row flex-xxl-row flex-lg-row flex-md-row flex-sm-column divContent">
+
+    <div class="list-group col-3 gap-3 divButtons">
+
+      <button type="button"
+        class="list-group-item list-group-item-action d-flex align-items-center gap-2 textMedium rounded-pill py-4"
+        aria-current="true" [ngClass]="{'active': currentPage === 1}" (click)="changeJob(1)">
+
+        <div *ngIf="currentPage == 1" class="spinner-grow" role="status">
+          <span class="visually-hidden"></span>
+        </div>
+        <div class="container-fluid p-0 d-flex flex-column">
+          <p class="textBody h5 m-0">TOTVS</p>
+          <p class="m-0 textBody dateButton">08/2023 até 03/2024</p>
+        </div>
+
+      </button>
+
+      <button type="button" [ngClass]="{'active': currentPage === 2}" (click)="changeJob(2)"
+        class="list-group-item list-group-item-action d-flex align-items-center gap-2 textMedium rounded-pill py-4">
+        <div *ngIf="currentPage == 2" class="spinner-grow" role="status">
+          <span class="visually-hidden"></span>
+        </div>
+        <div class="container-fluid p-0 d-flex flex-column">
+          <p class="textBody h5 m-0">TOTVS</p>
+          <p class="m-0 textBody dateButton">10/2022 até 04/2023</p>
+        </div>
+      </button>
+
+      <button type="button" [ngClass]="{'active': currentPage === 3}" (click)="changeJob(3)"
+        class="list-group-item list-group-item-action d-flex align-items-center gap-2 textMedium rounded-pill py-4">
+        <div *ngIf="currentPage == 3" class="spinner-grow" role="status">
+          <span class="visually-hidden"></span>
+        </div>
+        <div class="container-fluid p-0 d-flex flex-column">
+          <p class="textBody h5 m-0">Ericsson</p>
+          <p class="m-0 textBody dateButton">10/2017 até 09/2018</p>
+        </div>
+      </button>
+
+    </div>
+
+    <div class="container-fluid p-0 col">
+
+      <!-- Testar com o celular para ver se o padding está bom, caso ccotrario colocar a a classe divDescription  -->
+
+      <div *ngIf="currentPage == 1" class="container-fluid p-0 divDescription">
+        <h4 class="text-primary Subheadings m-0">Tec. Desenvolvimento de Software</h4>
+        <p class="text-white text-center textMedium h5 m-0">TOTVS</p>
+        <p class="text-secondary text-center textBody">08/2023 até 03/2023</p>
+        <p class="textBody text-white">Experiência com desenvolvimento de soluções escaláveis no sistema ERP Protheus,
+          utilizando a linguagem ADVPL (TOTVS).
+          <br>
+          <br>
+          Experiência com integrações de APIs no Front End com framework angular.
+          <br>
+          <br>
+          Experiência em elaboração de documentos técnicos detalhados para documentar processos e procedimentos.
+          <br>
+          <br>
+          Experiência com resoluções de problemas complexos, incluindo identificação e correção de bugs, depuração e
+          abordagem de questões relacionadas à lógica de programação.
+          <br>
+          <br>
+          Criei e mantive interfaces do sistema, utilizando o framework Angular com PO-UI (TOTVS).
+          <br>
+          <br>
+          Experiência com metodologias ágeis Scrum e Kanban, participando de reuniões diárias, retrospectivas e
+          planejamentos de sprint.
+        </p>
+      </div>
+
+      <div *ngIf="currentPage == 2" class="container-fluid p-0">
+        <h4 class="text-primary  Subheadings m-0">Trainee</h4>
+        <p class="text-white text-center m-0 textMedium h5">TOTVS</p>
+        <p class="text-secondary text-center textBody">10/2022 até 04/2023</p>
+        <p class="textBody text-white">Treinamento intensivo de Softs Skills e Hard Skills
+          <br>
+          <br>
+          Prática no dia a dia no setor de Prestadores de serviços na TOTVS.
+          <br>
+          <br>
+          Desenvolvendo um app em um squad do 0, sendo coordenado pelos padrinhos e madrinhas da TOTVS que estão nos
+          apoiando e ensinando as regras de negócio a gestão do projeto, trabalho em equipe, estamos recebendo auxílio
+          da agilista para desenvolvermos o projeto utilizando metodologia ágeis, seguindo um modelo de protótipo
+          desenvolvido pela nossa UI.
+        </p>
+      </div>
+
+      <div *ngIf="currentPage == 3" class="container-fluid p-0">
+        <h4 class="text-primary Subheadings m-0">Jovem Aprendiz</h4>
+        <p class="text-white text-center m-0 textMedium h5">Ericsson</p>
+        <p class="text-secondary text-center textBody">10/2017 até 09/2018</p>
+        <p class="textBody text-white">Responsável pelas elaboração, atualização e criação de planilhas de controle
+          Excel
+          <br>
+          <br>
+          Preenchimentos de documentos no Word
+          <br>
+          <br>
+          Negociações e cobranças á empresas, com atendimento telefone ou email
+          <br>
+          <br>
+          Organização de arquivos
+          <br>
+          <br>
+          Rotinas Administrativas
+          <br>
+          <br>
+          Controle e criação de acesso a técnico, através dos sistemas operacionais.
+        </p>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+</div>

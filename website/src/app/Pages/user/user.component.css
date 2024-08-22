@@ -9,6 +9,12 @@ span {
 a:hover {
   opacity: .7;
 }
+@media (max-width:768px){
+  a{
+    font-size: xxx-large !important;
+  }
+}
+
 
 @media (max-width:575px){
  .mainDiv{

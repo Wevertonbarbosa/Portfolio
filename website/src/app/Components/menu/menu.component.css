@@ -57,14 +57,18 @@ button {
   }
 }
 
-@media (max-width:575px) {
-  .divUserImg{
+@media (max-width:767px) {
+  .divUserImg {
     display: none;
   }
-  .divLinks{
+}
+
+@media (max-width:575px) {
+  .divLinks {
     width: 100%;
   }
-  .listLinks{
+
+  .listLinks {
     justify-content: space-around;
   }
 }

@@ -1,0 +1,24 @@
+.dateButton {
+  color: lightgrey;
+}
+
+@media (max-width: 767px) {
+  .divButtons {
+    padding: 20px;
+    width: 100%;
+  }
+  .divDescription{
+    padding: 20px !important;
+  }
+
+}
+
+@media (max-width: 575px) {
+  .mainDiv{
+    flex-direction: column;
+  }
+
+  .divContent{
+    flex-direction: column;
+  }
+}
