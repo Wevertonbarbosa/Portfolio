@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ExperienceComponent {
   public currentPage = 1;
-  public currentInfo = 2;
+  public currentInfo = 1;
 
   changeJob(value: number): void {
     this.currentPage = value;
