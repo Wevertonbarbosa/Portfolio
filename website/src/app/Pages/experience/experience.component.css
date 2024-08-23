@@ -2,6 +2,20 @@
   color: lightgrey;
 }
 
+a {
+  color: #bab8b8;
+}
+
+.chooseInfo{
+  cursor: pointer;
+}
+
+img {
+  width: 50%;
+  object-fit: cover;
+}
+
+
 @media (max-width: 767px) {
   .divButtons {
     padding: 20px;
@@ -21,4 +35,18 @@
   .divContent{
     flex-direction: column;
   }
+
+  .divList{
+    flex-direction: column;
+  }
+
+  .contentList{
+    width: 100%;
+  }
+
+  #listBorder{
+    border-right: none !important;
+    border-bottom: 1px solid lightgray;
+  }
+
 }

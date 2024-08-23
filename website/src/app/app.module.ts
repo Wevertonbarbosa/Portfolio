@@ -7,6 +7,7 @@ import { UserComponent } from './Pages/user/user.component';
 import { JobsComponent } from './Pages/jobs/jobs.component';
 import { MenuComponent } from './Components/menu/menu.component';
 import { ExperienceComponent } from './Pages/experience/experience.component';
+import { TechComponent } from './Pages/tech/tech.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ExperienceComponent } from './Pages/experience/experience.component';
     UserComponent,
     JobsComponent,
     MenuComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    TechComponent
   ],
   imports: [
     BrowserModule,

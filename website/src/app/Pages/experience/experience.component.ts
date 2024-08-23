@@ -6,9 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './experience.component.css',
 })
 export class ExperienceComponent {
-  currentPage = 1;
+  public currentPage = 1;
+  public currentInfo = 2;
 
   changeJob(value: number): void {
     this.currentPage = value;
+  }
+
+  changeInfo(value:number):void{
+    this.currentInfo = value
   }
 }
