@@ -1,0 +1,15 @@
+@media (max-width: 991px){
+  .divContent{
+    width: 90% !important;
+  }
+}
+
+
+@media (max-width: 575px) {
+  .mainDiv {
+    flex-direction: column;
+  }
+  form{
+    padding-bottom: 20px;
+  }
+}

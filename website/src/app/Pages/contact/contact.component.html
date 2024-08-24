@@ -1,0 +1,46 @@
+<div class="container-fluid p-0 d-flex mainDiv flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-xxl-row">
+  <app-menu class="border-end border-2"></app-menu>
+
+
+
+  <div class="container-fluid d-flex flex-column justify-content-start gap-4">
+    <div class="container-fluid p-4">
+      <h2 class="text-white Subheadings text-center">Entre em contato comigo</h2>
+    </div>
+
+
+    <div class="container-fluid p-0 d-flex justify-content-center flex-column w-50 divContent">
+      <form [formGroup]="myForm" (submit)="sendEmail()" class="d-flex flex-column gap-4 pb-sm-4 pb-md-3 p-lg-0">
+
+        <div class="form-group">
+          <label for="nome" class="textMedium text-white mb-1">Nome</label>
+          <input type="text" name="from_name" id="name" formControlName="from_name"
+            class="form-control textBody bg-dark text-white p-2" placeholder="Digite seu nome">
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="textMedium text-white mb-1">Email</label>
+          <input type="email" id="email" formControlName="from_email"
+            class="form-control textBody bg-dark text-white p-2" placeholder="Digite seu email">
+        </div>
+
+
+        <div class="form-floating mt-2">
+          <textarea class="form-control textMedium bg-dark text-white h-100" id="floatingTextarea2"
+            formControlName="message"></textarea>
+          <label for="floatingTextarea2" class="textMedium text-white">Mensagem</label>
+        </div>
+
+        <button type="submit" [disabled]="myForm.valid == false" class="btn btn-outline-primary mt-3 textMedium p-2">Enviar</button>
+      </form>
+
+    </div>
+
+    <div *ngIf="isFormCheck" class="container-fluid p-0 d-flex justify-content-end">
+      <app-toast></app-toast>
+    </div>
+
+  </div>
+
+
+</div>
