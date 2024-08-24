@@ -34,27 +34,28 @@ export class ContactComponent implements OnInit {
     }
   }
 
-  sendEmail() {
+  async sendEmail() {
     if (this.myForm.valid) {
       const data: DataSend = this.myForm.value;
-      // emailjs.init('R4-AERDn4Hg4JNTdg');
-      // let response = await emailjs.send('service_dknxng4', 'template_rkdztah', {
-      //   from_name: this.myForm.value.from_name,
-      //   to_name: this.myForm.value.to_name,
-      //   from_email: this.myForm.value.from_email,
-      //   message: this.myForm.value.message,
-      // });
+      emailjs.init('R4-AERDn4Hg4JNTdg');
+      let response = await emailjs.send('service_dknxng4', 'template_rkdztah', {
+        from_name: this.myForm.value.from_name,
+        to_name: this.myForm.value.to_name,
+        from_email: this.myForm.value.from_email,
+        message: this.myForm.value.message,
+      });
 
       this.isFormCheck = true;
+
       localStorage.setItem('formValid', JSON.stringify(this.isFormCheck));
-      
 
       setTimeout(() => {
         this.isFormCheck = false;
       }, 5000);
 
-      this.myForm.reset();
+      this.myForm.disable();
 
+      this.myForm.reset();
     } else {
       alert('Algum erro inesperado aconteceu, mas já irei ajustar!');
     }
