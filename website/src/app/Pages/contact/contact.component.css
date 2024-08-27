@@ -12,4 +12,7 @@
   form{
     padding-bottom: 20px;
   }
+  .textArea{
+    height: 170px !important;
+  }
 }

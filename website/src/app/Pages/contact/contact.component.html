@@ -25,13 +25,18 @@
         </div>
 
 
-        <div class="form-floating mt-2">
-          <textarea class="form-control textMedium bg-dark text-white h-100" id="floatingTextarea2"
+        <div class="form-group">
+          <label for="floatingTextarea2" class="textMedium text-white mb-1">Mensagem</label>
+          <textarea class="form-control textMedium bg-dark text-white h-100 textArea" id="floatingTextarea2"
             formControlName="message"></textarea>
-          <label for="floatingTextarea2" class="textMedium text-white">Mensagem</label>
         </div>
 
-        <button type="submit" [disabled]="myForm.valid == false" class="btn btn-outline-primary mt-3 textMedium p-2">Enviar</button>
+
+        <button type="submit" [disabled]="myForm.valid == false || checkSpinner == true"
+          class="btn btn-primary mt-3 textMedium p-2">
+          <span *ngIf="checkSpinner" class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+          Enviar
+        </button>
       </form>
 
     </div>
