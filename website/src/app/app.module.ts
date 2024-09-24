@@ -10,6 +10,7 @@ import { MenuComponent } from './Components/menu/menu.component';
 import { ExperienceComponent } from './Pages/experience/experience.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { ToastComponent } from './Components/toast/toast.component';
+import { PageFreelancerComponent } from './Components/page-freelancer/page-freelancer.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ToastComponent } from './Components/toast/toast.component';
     ExperienceComponent,
     ContactComponent,
     ToastComponent,
+    PageFreelancerComponent,
   ],
   imports: [
     BrowserModule,

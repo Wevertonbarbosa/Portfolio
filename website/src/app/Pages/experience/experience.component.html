@@ -5,21 +5,24 @@
   <div class="container-fluid p-0">
 
 
-    <div class="container-fluid p-0 my-2">
+    <div class="container-fluid p-0 my-3">
 
       <ul class="nav  nav-tabs justify-content-center gap-2">
         <li class="nav-item chooseInfo" (click)="changeInfo(1)">
-          <a class="nav-link textMedium" [ngClass]="{'active': currentInfo === 1}">Experiêcia</a>
+          <a class="nav-link textMedium" [ngClass]="{'active': currentInfo === 1}">Experiência</a>
         </li>
         <li class="nav-item" (click)="changeInfo(2)">
           <a class="nav-link textMedium chooseInfo" [ngClass]="{'active': currentInfo === 2}">Educação</a>
+        </li>
+        <li class="nav-item" (click)="changeInfo(3)">
+          <a class="nav-link textMedium chooseInfo" [ngClass]="{'active': currentInfo === 3}">Freelancer</a>
         </li>
       </ul>
     </div>
 
 
     <div
-      class="container-fluid d-flex align-items-center gap-3 flex-xl-row flex-xxl-row flex-lg-row flex-md-row flex-sm-column divContent">
+      class="container-fluid d-flex align-items-start gap-3 flex-xl-row flex-xxl-row flex-lg-row flex-md-row flex-sm-column divContent">
 
       <div class="list-group col-3 gap-3 divButtons">
 
@@ -76,6 +79,12 @@
           </div>
 
         </div>
+
+
+        <div *ngIf="currentInfo == 3" class="container-fluid p-0">
+          <app-page-freelancer></app-page-freelancer>
+        </div>
+
 
 
       </div>
@@ -195,13 +204,7 @@
 
               </div>
 
-
-
-
-
-
             </div>
-
 
           </div>
         </div>
@@ -210,6 +213,7 @@
       </div>
 
     </div>
+
   </div>
 
 </div>
