@@ -10,7 +10,7 @@ export class ExperienceComponent implements OnInit {
 
   }
   public currentPage = 1;
-  public currentInfo = 3;
+  public currentInfo = 1;
 
   changeJob(value: number): void {
     this.currentPage = value;
