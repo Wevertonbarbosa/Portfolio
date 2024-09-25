@@ -7,7 +7,7 @@
 
     <div class="container-fluid p-0 my-3">
 
-      <ul class="nav  nav-tabs justify-content-center gap-2">
+      <ul class="nav  nav-tabs justify-content-center gap-2 DivUlInfo">
         <li class="nav-item chooseInfo" (click)="changeInfo(1)">
           <a class="nav-link textMedium" [ngClass]="{'active': currentInfo === 1}">Experiência</a>
         </li>
@@ -81,11 +81,22 @@
         </div>
 
 
-        <div *ngIf="currentInfo == 3" class="container-fluid p-0">
-          <app-page-freelancer></app-page-freelancer>
+
+        <div *ngIf="currentInfo == 3" class="container-fluid p-0 d-flex flex-column gap-2">
+          <button type="button"
+            class="list-group-item list-group-item-action d-flex align-items-center gap-2 textMedium rounded-pill py-4 active"
+            aria-current="true">
+
+            <div class="spinner-grow" role="status">
+              <span class="visually-hidden"></span>
+            </div>
+            <div class="container-fluid p-0 d-flex flex-column">
+              <p class="textBody h5 m-0">Workana</p>
+              <p class="m-0 textBody dateButton">09/2023 até 09/2024</p>
+            </div>
+          </button>
+
         </div>
-
-
 
       </div>
 
@@ -205,14 +216,25 @@
               </div>
 
             </div>
-
           </div>
+
         </div>
 
+
+
+        <div *ngIf="currentInfo == 3" class="container-fluid p-0">
+          <app-page-freelancer></app-page-freelancer>
+        </div>
 
       </div>
 
     </div>
+
+    <div *ngIf="currentInfo == 3" class="container-fluid p-0 d-flex justify-content-start divFeedback">
+      <app-feedbacks></app-feedbacks>
+    </div>
+
+
 
   </div>
 

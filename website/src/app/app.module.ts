@@ -11,6 +11,7 @@ import { ExperienceComponent } from './Pages/experience/experience.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { ToastComponent } from './Components/toast/toast.component';
 import { PageFreelancerComponent } from './Components/page-freelancer/page-freelancer.component';
+import { FeedbacksComponent } from './Components/feedbacks/feedbacks.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { PageFreelancerComponent } from './Components/page-freelancer/page-freel
     ContactComponent,
     ToastComponent,
     PageFreelancerComponent,
+    FeedbacksComponent,
   ],
   imports: [
     BrowserModule,

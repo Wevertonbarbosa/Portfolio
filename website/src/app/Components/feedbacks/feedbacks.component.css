@@ -1,0 +1,17 @@
+@media (max-width: 664px) {
+  .divTags {
+    flex-wrap: wrap !important;
+  }
+
+  .divMain {
+    padding-bottom: 2em;
+  }
+}
+
+@media (max-width: 500px) {
+  .divTags {
+    gap: 0 !important;
+    padding: 0 !important;
+    justify-content: flex-start !important;
+  }
+}

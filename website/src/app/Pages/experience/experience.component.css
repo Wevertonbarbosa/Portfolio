@@ -6,7 +6,7 @@ a {
   color: #bab8b8;
 }
 
-.chooseInfo{
+.chooseInfo {
   cursor: pointer;
 }
 
@@ -21,32 +21,49 @@ img {
     padding: 20px;
     width: 100%;
   }
-  .divDescription{
+
+  .divDescription {
     padding: 20px !important;
+  }
+
+  .divFeedback {
+    justify-content: center !important;
   }
 
 }
 
 @media (max-width: 575px) {
-  .mainDiv{
+  .mainDiv {
     flex-direction: column;
   }
 
-  .divContent{
+  .divContent {
     flex-direction: column;
   }
 
-  .divList{
+  .divList {
     flex-direction: column;
   }
 
-  .contentList{
+  .contentList {
     width: 100%;
   }
 
-  #listBorder{
+  #listBorder {
     border-right: none !important;
     border-bottom: 1px solid lightgray;
+  }
+
+}
+
+@media (max-width: 390px) {
+  .DivUlInfo {
+    gap: 0 !important;
+  }
+
+  .DivUlInfo,
+  a {
+    padding: 12px 5px 2px !important;
   }
 
 }

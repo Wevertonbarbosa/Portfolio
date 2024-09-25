@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.css',
 })
-export class ExperienceComponent {
+export class ExperienceComponent implements OnInit {
+  ngOnInit() {
+
+  }
   public currentPage = 1;
   public currentInfo = 3;
 
@@ -13,7 +16,7 @@ export class ExperienceComponent {
     this.currentPage = value;
   }
 
-  changeInfo(value:number):void{
-    this.currentInfo = value
+  changeInfo(value: number): void {
+    this.currentInfo = value;
   }
 }
