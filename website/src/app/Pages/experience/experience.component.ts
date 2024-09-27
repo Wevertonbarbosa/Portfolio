@@ -6,9 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './experience.component.css',
 })
 export class ExperienceComponent implements OnInit {
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
   public currentPage = 1;
   public currentInfo = 1;
 

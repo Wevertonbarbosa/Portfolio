@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './jobs.component.css',
 })
 export class JobsComponent {
-  totalPages = 11;
+  totalPages = 12;
   currentPage = 1;
 
   changePage(pageNumber: number): void {

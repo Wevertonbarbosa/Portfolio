@@ -50,6 +50,10 @@
         width="504" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
         refererPolicy="strict-origin-when-cross-origin"></iframe>
 
+      <iframe *ngIf="currentPage === 12" src="https://www.behance.net/embed/project/208060083?ilo0=1" height="416"
+        width="504" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+        refererPolicy="strict-origin-when-cross-origin"></iframe>
+
     </div>
 
     <div class="container-fluid d-flex p-0 justify-content-center align-items-center flex-column">
@@ -59,23 +63,21 @@
           <li class="page-item" [class.disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">
             <span class="page-link textMedium">Anterior</span>
           </li>
-    
+
           <ng-container *ngFor="let page of [currentPage-1, currentPage, currentPage+1]">
-            <li *ngIf="page > 0 && page <= totalPages" 
-                class="page-item" 
-                [class.active]="currentPage === page" 
-                (click)="changePage(page)">
+            <li *ngIf="page > 0 && page <= totalPages" class="page-item" [class.active]="currentPage === page"
+              (click)="changePage(page)">
               <span class="page-link textMedium">{{ page }}</span>
             </li>
           </ng-container>
-    
+
           <li class="page-item" [class.disabled]="currentPage === totalPages" (click)="changePage(currentPage + 1)">
             <span class="page-link textMedium">Próximo</span>
           </li>
         </ul>
       </nav>
     </div>
-    
+
   </div>
 
 
