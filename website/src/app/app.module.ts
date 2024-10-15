@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -12,6 +12,7 @@ import { ContactComponent } from './Pages/contact/contact.component';
 import { ToastComponent } from './Components/toast/toast.component';
 import { PageFreelancerComponent } from './Components/page-freelancer/page-freelancer.component';
 import { FeedbacksComponent } from './Components/feedbacks/feedbacks.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -29,7 +30,13 @@ import { FeedbacksComponent } from './Components/feedbacks/feedbacks.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
